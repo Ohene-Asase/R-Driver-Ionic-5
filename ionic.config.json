@@ -1,0 +1,7 @@
+{
+  "name": "Req-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
