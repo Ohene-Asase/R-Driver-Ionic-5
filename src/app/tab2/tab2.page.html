@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab 2
+      R-driver
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content 
+    pullingIcon="arrow-dropdown"
+    pullingText="Pull to refresh"
+    refreshingSpinner="circles"
+    refreshingText="Refreshing...">
+    
+    </ion-refresher-content>
+  </ion-refresher>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-list *ngFor= "let histories of history">
+    <ion-item>
+       <ion-label>
+          <h1><b>{{histories.destination}}</b></h1>
+          <p>{{histories.purpose}}</p>
+          <p>{{histories.no_of_people}} people</p>
+          <p>{{histories.date}}, {{histories.due_time}}</p>
+        </ion-label>
+        <ion-note slot="end" style="font-size: 15px;" color="success">Completed</ion-note>
+    </ion-item>
+    </ion-list>
+   
+  
 </ion-content>

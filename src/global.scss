@@ -24,3 +24,15 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+.half-modal .modal-wrapper {
+    height: 80%;
+    
+    position: absolute;
+    display: block;
+}
+
+body {
+    height: 100;
+}

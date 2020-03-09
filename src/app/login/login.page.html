@@ -1,0 +1,40 @@
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col class="ion-align-self-center" size-md="6" size-md="6" size-xs="12">
+        <div text-center class="mypad">
+          <img src="../../assets/soft.png"  style="width:200px; filter:brightness(70%); display:block; margin: 0 auto;" >
+        <span>
+          <h1 style="color:rgb(0,140,255); font-style:italic; text-align: center;">R-Driver</h1>
+        </span>
+        </div>
+        <form [formGroup]="signedin" (ngSubmit)="Login(signedin.value)">
+        
+        <ion-list>
+         
+            <ion-item>
+            <ion-label class="label" position=""><ion-icon name="mail" color="primary"></ion-icon></ion-label>
+             <ion-input class="input" type="email" formControlName="email"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label class="label" position=""><ion-icon color="primary" name="checkmark-outline"></ion-icon></ion-label>
+            <ion-input class="input" type="password" formControlName="password"></ion-input> 
+          </ion-item>
+</ion-list>
+        <br>
+    <ion-button fill="solid" expand="block" class="btn" type="submit">Sign in</ion-button>
+    </form>
+<small padding class="ion-text-center">
+<h6>
+  Do not have an account??
+  <a routerLink="../sign-up" class="myLink">Sign up</a>
+</h6>
+</small>
+   
+
+      
+ </ion-col>   
+</ion-row>
+   </ion-grid>
+</ion-content>
