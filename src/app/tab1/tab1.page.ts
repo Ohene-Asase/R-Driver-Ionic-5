@@ -19,7 +19,7 @@ export class Tab1Page {
   
               ngOnInit(){
                 this._dataservice.getNrequest()
-                .subscribe(data => this.history = data)
+                .subscribe(data => this.history = data.sort((a,b) =>b.id-a.id))
                 
               }
            

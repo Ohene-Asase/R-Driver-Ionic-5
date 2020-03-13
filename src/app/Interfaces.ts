@@ -4,7 +4,8 @@ export interface IRequest{
     purpose: string,
     date: string,
     due_time:string,
-    no_of_people:string
+    no_of_people:string,
+    id:number
 }
 
 
@@ -13,6 +14,7 @@ export interface IReal {
     destination:string,
     purpose:string,
     data:string
+    
 }
 
 export interface IHistory{
